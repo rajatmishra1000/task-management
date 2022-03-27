@@ -66,7 +66,7 @@
                                             <td>{{ $task->created_at->format('d/m/Y h:m:s') }}</td>
                                             <td>
                                                 @isset($task)
-                                                    @if ($task->status === 0)
+                                                    @if ($task->status == false)
                                                         <form action="{{ route('tasks.status', $task->id) }}"
                                                             method="POST">
                                                             @method('PUT')

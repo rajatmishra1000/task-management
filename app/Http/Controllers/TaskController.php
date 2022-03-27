@@ -83,10 +83,10 @@ class TaskController extends Controller
 
     public function status(Task $task)
     {
-        if ($task->status === 0) {
-            $status = 1;
+        if ($task->status == false) {
+            $status = true;
         } else {
-            $status = 0;
+            $status = false;
         }
 
         Task::where('id', $task->id)
